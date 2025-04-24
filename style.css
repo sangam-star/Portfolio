@@ -18,6 +18,9 @@ body{
     width: 100%;
     height: 100vh;
     background-image: url(imagee/img.jpg);
+    background-blend-mode: overlay;
+    filter: blur(0.5px);
+     
     background-size: cover;
     background-position: center;
       
@@ -73,7 +76,7 @@ nav ul li a:hover::after{
 }
 .header-text h1{
     font-size: 60px;
-     margin-top: 20px;
+     margin-top: -200px;
 }
 .header-text h1 span {
 
