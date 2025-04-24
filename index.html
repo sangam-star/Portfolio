@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio  website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fddee332fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <div id="header">
+        <div class="container">
+            <nav>
+                <img src="imagee/logo.png" class="logo">
+                
+                <ul id="sidemenu"> 
+                    <li> <a href="#header"> Home</a></li>
+                    <li> <a href="#about"> About</a></li>
+                    <li> <a href="#services"> services</a></li>
+                    <li> <a href="#portfolio"> Portfolio</a></li>
+                    <li> <a href="#contact"> Contact</a></li>
+
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <br>
+
+            <div class="header-text">
+
+                <!-- <p> UI/ UX Designer</p> -->
+                <!-- <p> Aspiring Software Developer</p> -->
+                <h4  > Tech Enthusiast Driven by <br>Innovation and Creativity </h4>
+                <h1> Hi, I'm <span> Sangam Sedai</span> <br>  From Nepal. </h1>
+            </div> 
+        </div> 
+     </div>
+
+     <!-- .......about ...... -->
+
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./imagee/photo.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <br>
+                    <p>Hello! I'm <b style="font-weight: 1000;">Sangam Sedai</b>, a passionate tech enthusiast from Nepal with a strong interest in software development and web technologies. I strive to create innovative and user-friendly solutions, driven by curiosity, creativity, and a commitment to continuous learning. I have a solid foundation in <b style="font-weight: 1000;">HTML, CSS, JavaScript, and Java</b> , and I enjoy building clean, functional, and responsive websites. From developing a Java-based car rental system to solving complex programming challenges, I am dedicated to delivering quality work and continuously improving my skills in the ever-evolving tech landscape.
+
+                    </p>
+                    
+                    <!-- <p>I'm a dedicated and curious developer with a strong foundation in HTML, CSS, JavaScript, and Java. My passion lies in creating clean, functional, and responsive websites. I enjoy problem-solving and learning new technologies to stay current in the rapidly changing tech world.
+                        <br> <br>
+                        From developing a Java-based car rental system to working with modern tools like React and Tailwind, my goal is to build applications that are both useful and beautiful. I’m actively looking for new opportunities to grow, collaborate, and contribute to meaningful projects.
+                    </p> -->
+                    <br>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                        <p class="tab-links"  onclick="opentab('experience')">  Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">  Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <!-- <li><span>UI/UX</span> <br> Designing Web/App interfaces</li>
+                            <li><span>Web Devlopement</span><br> Web App Development</li>
+                            <li><span>App Developement</span> <br> Building Android/ iOS apps</li> -->
+                            <li><span>Programming Languages</span> <br> Proficient in C, Java, JavaScript, HTML, and CSS</li>
+                            <!-- <li><span>Frameworks & Libraries</span> <br> Experienced with React, Bootstrap, and Tailwind CSS</li> -->
+                            <li><span>Version Control</span> <br> Proficient in Git and GitHub for collaborative development</li>
+                            <!-- <li><span>Database Management</span> <br> Knowledge of MySQL and MongoDB</li> -->
+                            <li><span>Problem-Solving</span> <br> Strong analytical and debugging skills</li>
+                            <li><span>Tools & Platforms</span> <br> Familiar with Visual Studio Code, IntelliJ IDEA, and NetBeans</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Web Development Projects</span> <br> Built responsive websites using HTML, CSS, and JavaScript, focusing on user-friendly designs and functionality.</li>
+                            <li><span>Java Application Development</span> <br> Developed a car rental system using Java, implementing object-oriented programming principles and database integration.</li>
+                            <li><span>Interactive Web Features</span> <br> Created dynamic and interactive web components using JavaScript, enhancing user experience.</li>
+                            <li><span>Portfolio Website</span> <br> Designed and developed a personal portfolio website to showcase skills and projects using HTML, CSS, and JavaScript.</li>
+                            <li><span>Collaborative Projects</span> <br> Worked in teams to develop web applications, utilizing version control systems like Git and GitHub.</li>
+                            <!-- <li><span>Internship at XYZ Company</span> <br> Assisted in developing a responsive e-commerce website using HTML, CSS, and JavaScript.</li>
+                            <li><span>Freelance Web Developer</span> <br> Designed and implemented custom websites for small businesses, focusing on user experience and performance.</li>
+                            <li><span>Open Source Contributor</span> <br> Contributed to GitHub projects by fixing bugs and adding features in JavaScript-based applications.</li> -->
+                             
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelor of Computer Applications (BCA)</span> <br> 2023 - Present: Pursuing BCA under Tribhuvan University (TU), focusing on software development, database management, and web technologies.</li>
+                             
+                            <li><span>Diploma in Sub-Engineering</span> <br> 2018 - 2022: Completed diploma under National Examination Board (NEB) with a focus on sub-engineering subjects.</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+     </div>
+
+        <!-- .......services ...... -->
+         <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                       
+                        <h2> web design</h2>
+                        <p>I specialize in designing visually appealing and user-friendly web interfaces using HTML, CSS, and JavaScript, ensuring a seamless user experience.</p>
+                        <a href="#">learn more</a>
+                    </div>
+
+                    <div>
+
+                        
+                        <i class="fa-solid fa-blog"></i>
+
+                        <h2>Web Development</h2>
+                        <p>Leveraging my expertise in front-end technologies like HTML, CSS, and JavaScript, I craft responsive, dynamic, and performance-optimized websites. My approach emphasizes clean code architecture, accessibility, and seamless user experiences, ensuring that each project aligns with modern web standards and client requirements.</p>
+                        <a href="#">learn more</a>
+                        
+                    </div>
+
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>App Development</h2>
+                        <p>I am passionate about creating mobile applications that are not only functional but also user-friendly. I focus on delivering high-quality apps that meet user needs and expectations.</p>
+                        <a href="#">learn more</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+         </div>
+         <!-- ------------portfolio---------- -->
+          <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+
+                        <img src="https://imgs.search.brave.com/Q_wJqJ6PMregWrJZR3V_WXJ5M9igINX9iaK7Ec8vrbI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nbWFydC5jb20v/ZmlsZXMvMy9Xb3Js/ZC1XaWRlLVdlYi1Q/TkctVHJhbnNwYXJl/bnQtSW1hZ2UucG5n" >
+                        <div class="layer">
+                            <h3>Portfolio Website</h3>
+                            <p>Designed and developed a personal portfolio website to showcase skills and projects using HTML, CSS, and JavaScript.</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+
+                        <img src="https://imgs.search.brave.com/rQbwa6OdwQ02nYhYzAZsO2StqYnTT6rxI8_iONDpacg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxNi8w/Ny9XZWItRGV2ZWxv/cG1lbnQtUE5HLVBp/Y3R1cmUucG5n" >
+
+                        <div class="layer">
+                            <h3>Web Development</h3>
+                            <p>Developed a responsive website for a local business, focusing on user experience and performance optimization.</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="work">
+
+                        <img src="https://imgs.search.brave.com/cmCprr3nlAqeQoIMyXzoF25Fm9xA4kgq7mFc1Q2KLec/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/cG5naW1nLmNvbS90/aHVtYi93ZWJfZGV2/ZWxvcG1lbnQvNzY4/NDEtZGV2ZWxvcG1l/bnQtd2ViLW1vYmls/ZS1hcHAtaGFuZC1j/ZWxsLXBob25lLXRo/dW1iLnBuZw" >
+
+                        <div class="layer">
+                            <h3>Java Application</h3>
+                            <p>Developed a car rental system using Java, implementing object-oriented programming principles and database integration.</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
+
+            </div>
+          </div>
+
+          <!-- --------contact----------- -->
+
+          <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title"> Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i> ssedai836@gmail.com</p>
+                        <p> <i class="fa-solid fa-phone"></i> 9844354900</p>
+                        <br>
+                        <div class="social-icon">
+                            <a href="https://github.com/sangam-star"><i class="fa-brands fa-square-github"></i></a>
+                             
+                            <a href="https://www.linkedin.com/in/sangam-sedai/"><i class="fa-brands fa-linkedin"></i></a>
+
+                        </div>
+                        <a href="./CV.pdf"  download class="btn btn2">Download CV</a>
+
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="NAME" placeholder="Your Name" required>
+                            <input type="email" name="EMAIL" placeholder="Your Email" required>
+                            <textarea name="Message" rows="3" placeholder="yourmessage"></textarea>
+                            <button type="submit" class="btn btn2">submit</button>
+                        </form>
+                        <span id="msg"> </span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy;  Sangam. All right reserved.  </p>
+            </div>
+
+          </div>
+           
+          
+
+          
+
+     
+     
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+             event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+ 
+    </script>
+
+    <script>
+        varsidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzAqo5CAHrp08hWyxCPlimVxcYLDOPoAd9M9lZtUyhninmjo4HhB2kApyFar3jl0tVfeQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {msg .innerHTML= "Message sent successfully!"; setTimeout(function(){ msg.innerHTML = "" }, 5000); form.reset();})
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+</body>
+</html>
