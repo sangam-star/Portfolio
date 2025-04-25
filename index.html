@@ -106,8 +106,74 @@
         </div>
      </div>
 
-        <!-- .......services ...... -->
-         <div id="services">
+      
+      <!-- not fix code for showing skills -->
+      <div class="my-skill-bars">
+        <div class="my-skill">
+          <div class="my-skill-name">
+            <span>HTML/CSS</span>
+            <span>80%</span>
+          </div>
+          <div class="my-skill-bar">
+            <div class="my-skill-progress" data-width="80"></div>
+          </div>
+        </div>
+
+        <div class="my-skill">
+            <div class="my-skill-name">
+              <span>Java</span>
+              <span>70%</span>
+            </div>
+            <div class="my-skill-bar">
+              <div class="my-skill-progress" data-width="65"></div>
+            </div>
+          </div>
+    
+        <div class="my-skill">
+          <div class="my-skill-name">
+            <span>JavaScript</span>
+            <span>50%</span>
+          </div>
+          <div class="my-skill-bar">
+            <div class="my-skill-progress" data-width="65"></div>
+          </div>
+        </div>
+
+        <div class="my-skill">
+            <div class="my-skill-name">
+              <span>C Programming</span>
+              <span>80%</span>
+            </div>
+            <div class="my-skill-bar">
+              <div class="my-skill-progress" data-width="65"></div>
+            </div>
+          </div>
+
+          <div class="my-skill">
+            <div class="my-skill-name">
+              <span>Python</span>
+              <span>40%</span> 
+            </div>
+            <div class="my-skill-bar">
+              <div class="my-skill-progress" data-width="65"></div>
+            </div>
+          </div>
+    
+        <div class="my-skill">
+          <div class="my-skill-name">
+            <span>React</span>
+            <span>60%</span>
+          </div>
+          <div class="my-skill-bar">
+            <div class="my-skill-progress" data-width="60"></div>
+          </div>
+        </div>
+      </div>
+    
+      <script src="skill-bars.js"></script>
+
+        <!-- .......services ......  recently not in use -->
+         <!-- <div id="services">
             <div class="container">
                 <h1 class="sub-title">My Services</h1>
                 <div class="services-list">
@@ -142,31 +208,46 @@
 
 
             </div>
-         </div>
+         </div> -->
          <!-- ------------portfolio---------- -->
           <div id="portfolio">
             <div class="container">
                 <h1 class="sub-title">My Work</h1>
                 <div class="work-list">
-                    <div class="work">
+                     
 
-                        <img src="./imagee/portfolio.png" >
+                    <div class="work">
+                        <img src="./imagee/portfolio.png">
+                        
                         <div class="layer">
                             <h3>Portfolio Website</h3>
                             <p>Designed and developed a personal portfolio website to showcase skills and projects using HTML, CSS, and JavaScript.</p>
-                            <a href="  # "  ><i class="fa-solid fa-up-right-from-square"></i></a>
+                            
+                            <!-- <a href=" https://github.com/sangam-star/Portfolio" target="_blank">
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a> -->
+                            <a href="https://www.sangamsedai.com.np" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/sangam-star/Portfolio/" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
-                    </div> 
+                    </div>
+                    
+                     
+
+                    <!--  -->
+
                     <div class="work">
-
-                        <img src="./imagee/nepalaya.png" >
-
+                        <img src="./imagee/nepalaya.png">
+                    
                         <div class="layer">
                             <h3>Website-Nepalaya</h3>
                             <p>Created a responsive website for Nepalaya College, emphasizing user experience and modern design principles.</p>
-                            <a href= " #"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            <a href="https://github.com/sangam-star/Nepalaya_website" target="_blank">
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
+                    
+                    
                     
                     <div class="work">
 
@@ -175,10 +256,17 @@
                         <div class="layer">
                             <h3>Java Application</h3>
                             <p>Developed a car rental system using Java, implementing object-oriented programming principles and database integration.</p>
-                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            
+                            <a href="https://github.com/sangam-star/mini-project-java-" target="_blank">
+                                <i class="fa-solid fa-up-right-from-square"></i>
                         </div>
+
+                        
                     </div>
                 </div>
+
+                 
+                
                 <a href="#" class="btn">See more</a>
 
             </div>
@@ -271,6 +359,18 @@
             .catch(error => console.error('Error!', error.message))
         })
       </script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const bars = document.querySelectorAll('.my-skill-progress');
+            bars.forEach(bar => {
+              const width = bar.getAttribute('data-width');
+              bar.style.width = width + '%';
+            });
+          });
+      </script>
+ 
+         
 
 </body>
 </html>
