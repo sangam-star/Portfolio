@@ -167,7 +167,7 @@ nav ul li a:hover::after{
 }
 /* not fix */
 
-.my-skill-bars {
+/* .my-skill-bars {
     max-width: 600px;
     margin: 40px auto;
     font-family: Arial, sans-serif;
@@ -198,11 +198,134 @@ nav ul li a:hover::after{
     background-color: #3498db;
     border-radius: 10px;
     transition: width 1.5s ease-in-out;
+  } */
+
+
+  /* skills */
+
+  /* ====== Advanced Skills Section Styling ====== */
+
+#my-skills {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #eef2f3, #f7f8f8);
+    font-family: 'Poppins', sans-serif;
   }
+  
+  .my-skills-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .my-skills-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  
+  .my-skills-header h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #4facfe;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+  
+  .my-skills-header p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 8px;
+  }
+  
+  .my-skills-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .my-skill {
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .my-skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .my-skill-name {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .my-skill-bar {
+    width: 100%;
+    background-color: #e5e5e5;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 14px;
+    position: relative;
+  }
+  
+  .my-skill-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    transition: width 1.4s ease-in-out;
+    border-radius: 30px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .my-skills-header h2 {
+      font-size: 28px;
+    }
+  
+    .my-skill {
+      padding: 16px 20px;
+    }
+  }
+  
+  /* addition only for skill */
+
+
+  /* .my-skill {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  .my-skill:nth-child(1) { animation-delay: 0.1s; }
+  .my-skill:nth-child(2) { animation-delay: 0.2s; }
+  .my-skill:nth-child(3) { animation-delay: 0.3s; }
+  .my-skill:nth-child(4) { animation-delay: 0.4s; }
+  .my-skill:nth-child(5) { animation-delay: 0.5s; }
+  .my-skill:nth-child(6) { animation-delay: 0.6s; }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } */
+
+  
 
 /* ok */
 /* --------services -------- */
-#services{
+/* #services{
     padding: 30px 0;
      
 }
@@ -247,7 +370,98 @@ nav ul li a:hover::after{
 
     transform: translateY(-10px);
     transition: all 0.3s ease;
-}
+} */
+
+
+
+#services {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #e3f2fd, #f9fbe7);
+  }
+  
+  .services-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .services-header h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .services-header p {
+    font-size: 1.2rem;
+    color: #607d8b;
+  }
+  
+  /* Grid Layout */
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  /* Service Card Styling */
+  .service-card {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(33,150,243,0.15), transparent 70%);
+    z-index: 0;
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+  
+  .service-card:hover::before {
+    opacity: 1;
+    transform: rotate(25deg);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+  }
+  
+  .service-card img {
+    width: 65px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .service-card h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #00796b;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #555;
+    position: relative;
+    z-index: 1;
+  }
+  
+
 
 /* -----------portfolio----------------- */
 #portfolio{
