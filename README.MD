@@ -71,4 +71,10 @@ You can still use it by clicking “Advanced” > “Go to project (unsafe)” i
 - Add blog or testimonials section
 - Dark/light mode toggle
 
+
+## 📸 Screenshot
+
+![Chat Window](screenshots/f-git_ss.png)
+
+
 Thank you for visiting my portfolio!
