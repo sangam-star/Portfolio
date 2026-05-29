@@ -469,36 +469,35 @@
     document.addEventListener('DOMContentLoaded', () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Animate bars
-            const bars = entry.target.querySelectorAll('.skill-bar');
-            bars.forEach(bar => {
-              bar.style.width = bar.getAttribute('data-width') + '%';
-            });
-            // Animate counters if this is the stats section
-            const counters = entry.target.querySelectorAll('.number[data-count]');
-            counters.forEach(counter => {
-              const target = +counter.getAttribute('data-count');
-              const increment = Math.ceil(target / 30);
-              let current = 0;
-              const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                  counter.textContent = target + '+';
-                  clearInterval(timer);
-                } else {
-                  counter.textContent = current;
-                }
-              }, 50);
-            });
-          }
+          if (!entry.isIntersecting) return;
+          // Animate bars
+          entry.target.querySelectorAll('.skill-bar').forEach(bar => {
+            bar.style.width = bar.getAttribute('data-width') + '%';
+          });
+          // Animate counters
+          entry.target.querySelectorAll('.number[data-count]').forEach(counter => {
+            const target = +counter.getAttribute('data-count');
+            if (target <= 0) return;
+            const increment = Math.ceil(target / 30);
+            let current = 0;
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                counter.textContent = target + '+';
+                clearInterval(timer);
+              } else {
+                counter.textContent = current;
+              }
+            }, 50);
+          });
+          observer.unobserve(entry.target);
         });
-      }, { threshold: 0.4 });
+      }, { threshold: 0.2 });
 
-      const skillsSection = document.getElementById('skills');
-      const statsSection = document.getElementById('stats');
-      if (skillsSection) observer.observe(skillsSection);
-      if (statsSection) observer.observe(statsSection);
+      ['skills', 'stats'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
     });
 
     // ===== Scroll Reveal =====
