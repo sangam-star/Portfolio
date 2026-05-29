@@ -1,503 +1,580 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal portfolio  website -Sangam Sedai</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/fddee332fc.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sangam Sedai — Tech enthusiast, web developer, and BCA student from Nepal. Explore my portfolio, projects, and skills.">
+  <meta name="keywords" content="Sangam Sedai, portfolio, web developer, Nepal, software developer, BCA, frontend">
+  <meta name="author" content="Sangam Sedai">
+  <meta property="og:title" content="Sangam Sedai — Portfolio">
+  <meta property="og:description" content="Tech enthusiast driven by innovation and creativity.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sangamsedai.com.np">
+  <meta property="og:image" content="https://sangamsedai.com.np/imagee/sangam.png">
+  <meta name="theme-color" content="#ff004f">
+  <title>Sangam Sedai — Portfolio</title>
+  <link rel="icon" type="image/png" href="imagee/sangam.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="imagee/sangam.png" class="logo">
-                
-                <ul id="sidemenu"> 
-                    <li> <a href="#header"> Home</a></li>
-                    <li> <a href="#about"> About</a></li>
-                    <li> <a href="#services"> services</a></li>
-                    <li> <a href="#portfolio"> Portfolio</a></li>
-                    <li> <a href="#contact"> Contact</a></li>
 
-                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-                </ul>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <br>
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#hero"><img src="imagee/sangam.png" class="logo" alt="Sangam Sedai"></a>
 
-            <div class="header-text">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="close-btn" onclick="closeNav()" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </ul>
 
-                <!-- <p> UI/ UX Designer</p> -->
-                <!-- <p> Aspiring Software Developer</p> -->
-                <h1> Hi, I'm <br><span> Sangam Sedai</span> <br>  From Nepal. </h1>
-                <h4  > Tech Enthusiast Driven by <br>Innovation and Creativity </h4>
-            </div> 
-        </div> 
-     </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <button class="theme-toggle desktop-only" id="themeToggleDesktop" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="hamburger" onclick="openNav()" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
 
-     <!-- .......about ...... -->
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Open to work &amp; collaboration
+      </div>
+      <p class="tagline">Hi, I'm</p>
+      <h1><span class="highlight">Sangam Sedai</span></h1>
+      <div class="typing-wrapper">
+        <span class="typing"></span>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 28px; max-width: 520px;">
+        I build clean, responsive websites and desktop applications — turning ideas into functional, polished products.
+      </p>
+      <div class="cta-buttons">
+        <a href="#portfolio" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-down"></i>
+          View My Work
+        </a>
+        <a href="./cv%20sangam%202025.pdf" download class="btn btn-outline">
+          <i class="fa-solid fa-download"></i>
+          Download CV
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-solid fa-envelope"></i>
+          Hire Me
+        </a>
+      </div>
+    </div>
+  </section>
 
-     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="./imagee/photo.jpg" >
+  <!-- About -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="overline">About</span>
+      <h2>Who I Am</h2>
+      <p>A quick look at my background, values, and expertise</p>
+    </div>
 
-                    
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <br>
-                    <p>Hello! I'm <b style="font-weight: 1000;">Sangam Sedai</b>, a passionate tech enthusiast from Nepal with a strong interest in software development and web technologies. I strive to create innovative and user-friendly solutions, driven by curiosity, creativity, and a commitment to continuous learning. I have a solid foundation in <b style="font-weight: 1000;">HTML, CSS, JavaScript, and Java</b> , and I enjoy building clean, functional, and responsive websites. From developing a Java-based car rental system to solving complex programming challenges, I am dedicated to delivering quality work and continuously improving my skills in the ever-evolving tech landscape.
-
-                    </p>
-                    
-                    <!-- <p>I'm a dedicated and curious developer with a strong foundation in HTML, CSS, JavaScript, and Java. My passion lies in creating clean, functional, and responsive websites. I enjoy problem-solving and learning new technologies to stay current in the rapidly changing tech world.
-                        <br> <br>
-                        From developing a Java-based car rental system to working with modern tools like React and Tailwind, my goal is to build applications that are both useful and beautiful. I’m actively looking for new opportunities to grow, collaborate, and contribute to meaningful projects.
-                    </p> -->
-                    <br>
-
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
-                        <p class="tab-links"  onclick="opentab('experience')">  Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">  Education</p>
-
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <!-- <li><span>UI/UX</span> <br> Designing Web/App interfaces</li>
-                            <li><span>Web Devlopement</span><br> Web App Development</li>
-                            <li><span>App Developement</span> <br> Building Android/ iOS apps</li> -->
-                            <li><span>Programming Languages</span> <br> Proficient in C, Java, JavaScript, HTML, and CSS</li>
-                            <!-- <li><span>Frameworks & Libraries</span> <br> Experienced with React, Bootstrap, and Tailwind CSS</li> -->
-                            <li><span>Version Control</span> <br> Proficient in Git and GitHub for collaborative development</li>
-                            <!-- <li><span>Database Management</span> <br> Knowledge of MySQL and MongoDB</li> -->
-                            <li><span>Problem-Solving</span> <br> Strong analytical and debugging skills</li>
-                            <li><span>Tools & Platforms</span> <br> Familiar with Visual Studio Code, IntelliJ IDEA, and NetBeans</li>
-                            
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Web Development Projects</span> <br> Built responsive websites using HTML, CSS, and JavaScript, focusing on user-friendly designs and functionality.</li>
-                            <li><span>Java Application Development</span> <br> Developed a car rental system using Java, implementing object-oriented programming principles and database integration.</li>
-                            <li><span>Interactive Web Features</span> <br> Created dynamic and interactive web components using JavaScript, enhancing user experience.</li>
-                            <li><span>Portfolio Website</span> <br> Designed and developed a personal portfolio website to showcase skills and projects using HTML, CSS, and JavaScript.</li>
-                            <li><span>Collaborative Projects</span> <br> Worked in teams to develop web applications, utilizing version control systems like Git and GitHub.</li>
-                            <!-- <li><span>Internship at XYZ Company</span> <br> Assisted in developing a responsive e-commerce website using HTML, CSS, and JavaScript.</li>
-                            <li><span>Freelance Web Developer</span> <br> Designed and implemented custom websites for small businesses, focusing on user experience and performance.</li>
-                            <li><span>Open Source Contributor</span> <br> Contributed to GitHub projects by fixing bugs and adding features in JavaScript-based applications.</li> -->
-                             
-                            
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Bachelor of Computer Applications (BCA)</span> <br> 2023 - Present: Pursuing BCA under Tribhuvan University (TU), focusing on software development, database management, and web technologies.</li>
-                             
-                            <li><span> Sub-Engineer - CIVIL</span> <br> 2018 - 2022: Completed diploma under National Examination Board (NEB) with a focus on sub-engineering subjects.</li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
+    <div class="about-grid">
+      <div class="about-image reveal reveal-delay-1">
+        <div class="img-wrapper">
+          <img src="./imagee/photo.jpg" alt="Portrait of Sangam Sedai" loading="lazy">
         </div>
-     </div>
+      </div>
 
-      
-      <!-- not fix code for showing skills -->
-      <!-- <div class="my-skill-bars">
-        <div class="my-skill">
-          <div class="my-skill-name">
-            <span>HTML/CSS</span>
-            <span>80%</span>
-          </div>
-          <div class="my-skill-bar">
-            <div class="my-skill-progress" data-width="80"></div>
+      <div class="about-text reveal reveal-delay-2">
+        <h2>Aspiring <span>Software Developer</span> from Nepal</h2>
+        <p>
+          I'm a BCA student and self-taught developer with a strong foundation in front-end technologies 
+          and Java. I enjoy turning complex problems into simple, beautiful, and intuitive solutions. 
+          Every project I take on is driven by curiosity, attention to detail, and a commitment to 
+          writing clean, maintainable code.
+        </p>
+
+        <div class="about-values">
+          <span><i class="fa-solid fa-check-circle"></i> Clean Code</span>
+          <span><i class="fa-solid fa-check-circle"></i> Responsive Design</span>
+          <span><i class="fa-solid fa-check-circle"></i> Problem Solver</span>
+          <span><i class="fa-solid fa-check-circle"></i> Lifelong Learner</span>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="skills-tab">Skills</button>
+          <button class="tab-btn" data-tab="experience-tab">Experience</button>
+          <button class="tab-btn" data-tab="education-tab">Education</button>
+        </div>
+
+        <div class="tab-panel active" id="skills-tab">
+          <ul>
+            <li><span>Programming Languages</span><p>Proficient in C, Java, JavaScript, HTML, and CSS</p></li>
+            <li><span>Version Control</span><p>Proficient in Git and GitHub for collaborative development</p></li>
+            <li><span>Problem-Solving</span><p>Strong analytical and debugging skills</p></li>
+            <li><span>Tools &amp; Platforms</span><p>Familiar with VS Code, IntelliJ IDEA, and NetBeans</p></li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="experience-tab">
+          <ul>
+            <li><span>Web Development Projects</span><p>Built responsive websites using HTML, CSS, and JavaScript</p></li>
+            <li><span>Java Application Development</span><p>Developed a car rental system using Java with OOP principles</p></li>
+            <li><span>Interactive Web Features</span><p>Dynamic UI components using JavaScript</p></li>
+            <li><span>Portfolio Website</span><p>Designed and developed a personal portfolio to showcase my work</p></li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="education-tab">
+          <ul>
+            <li><span>Bachelor of Computer Applications (BCA)</span><p>2023 — Present &middot; Tribhuvan University</p></li>
+            <li><span>Diploma in Civil Engineering (Sub-Engineer)</span><p>2018 — 2022 &middot; National Examination Board</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="number" data-count="3">0</div>
+        <div class="label">Projects Completed</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="number" data-count="5">0</div>
+        <div class="label">Technical Skills</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="number" data-count="2">0</div>
+        <div class="label">Years of Learning</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="number" data-count="3">0</div>
+        <div class="label">Happy Clients</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="overline">Expertise</span>
+      <h2>My Skills</h2>
+      <p>A quick overview of my technical abilities</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-item reveal">
+        <div class="skill-header">
+          <i class="fa-brands fa-html5"></i>
+          <span>HTML / CSS</span>
+          <span class="percent">80%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-bar" data-width="80"></div>
+        </div>
+      </div>
+
+      <div class="skill-item reveal reveal-delay-1">
+        <div class="skill-header">
+          <i class="fa-brands fa-java"></i>
+          <span>Java</span>
+          <span class="percent">70%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-bar" data-width="70"></div>
+        </div>
+      </div>
+
+      <div class="skill-item reveal reveal-delay-2">
+        <div class="skill-header">
+          <i class="fa-brands fa-js"></i>
+          <span>JavaScript</span>
+          <span class="percent">50%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-bar" data-width="50"></div>
+        </div>
+      </div>
+
+      <div class="skill-item reveal">
+        <div class="skill-header">
+          <i class="fa-solid fa-code"></i>
+          <span>C Programming</span>
+          <span class="percent">80%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-bar" data-width="80"></div>
+        </div>
+      </div>
+
+      <div class="skill-item reveal reveal-delay-1">
+        <div class="skill-header">
+          <i class="fa-brands fa-python"></i>
+          <span>Python</span>
+          <span class="percent">40%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-bar" data-width="40"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="section-header reveal">
+      <span class="overline">Services</span>
+      <h2>What I Offer</h2>
+      <p>My technical skills and what I bring to your team</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Responsive Web Development</h3>
+        <p>I build fast, mobile-first websites that look great on every screen — from personal portfolios to business landing pages.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="icon"><i class="fa-brands fa-java"></i></div>
+        <h3>Java Desktop Applications</h3>
+        <p>Reliable desktop software with intuitive interfaces — from utility tools to complete management systems using OOP and Swing.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="icon"><i class="fa-brands fa-python"></i></div>
+        <h3>Django Web Apps</h3>
+        <p>Simple yet functional web applications with user authentication, form processing, and database-backed content — powered by Python Django.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="section-header reveal">
+      <span class="overline">Portfolio</span>
+      <h2>My Work</h2>
+      <p>Projects I've built and contributed to</p>
+    </div>
+
+    <div class="work-grid">
+      <div class="work-card reveal">
+        <div class="thumb">
+          <img src="./imagee/portfolio.png" alt="Portfolio Website screenshot" loading="lazy">
+          <div class="overlay">
+            <a href="https://www.sangamsedai.com.np" target="_blank" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/sangam-star/Portfolio/" target="_blank" aria-label="Source code"><i class="fab fa-github"></i></a>
           </div>
         </div>
-      
-        <div class="my-skill">
-          <div class="my-skill-name">
-            <span>Java</span>
-            <span>70%</span>
-          </div>
-          <div class="my-skill-bar">
-            <div class="my-skill-progress" data-width="70"></div>
-          </div>
-        </div>
-      
-        <div class="my-skill">
-          <div class="my-skill-name">
-            <span>JavaScript</span>
-            <span>50%</span>
-          </div>
-          <div class="my-skill-bar">
-            <div class="my-skill-progress" data-width="50"></div>
-          </div>
-        </div>
-      
-        <div class="my-skill">
-          <div class="my-skill-name">
-            <span>C Programming</span>
-            <span>80%</span>
-          </div>
-          <div class="my-skill-bar">
-            <div class="my-skill-progress" data-width="80"></div>
-          </div>
-        </div>
-      
-        <div class="my-skill">
-          <div class="my-skill-name">
-            <span>Python</span>
-            <span>40%</span>
-          </div>
-          <div class="my-skill-bar">
-            <div class="my-skill-progress" data-width="40"></div>
-          </div>
-        </div>
-      
-        <div class="my-skill">
-          <div class="my-skill-name">
-            <span>React</span>
-            <span>60%</span>
-          </div>
-          <div class="my-skill-bar">
-            <div class="my-skill-progress" data-width="60"></div>
+        <div class="info">
+          <h3>Portfolio Website</h3>
+          <p>A fully responsive personal portfolio with dark/light themes, scroll animations, and a contact form — designed to make a strong professional impression.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
         </div>
       </div>
 
-      <script src="skill-bars.js"></script>
-       -->
-
-
-       <section id="my-skills">
-        <div class="my-skills-header">
-          <h2>My Skills</h2>
-          <p>A quick overview of my technical abilities</p>
+      <div class="work-card reveal reveal-delay-1">
+        <div class="thumb">
+          <img src="./imagee/nepalaya.png" alt="Nepalaya College Website screenshot" loading="lazy">
+          <div class="overlay">
+            <a href="https://github.com/sangam-star/Nepalaya_website" target="_blank" aria-label="Source code"><i class="fab fa-github"></i></a>
+          </div>
         </div>
-      
-        <div class="my-skills-container">
-      
-          <div class="my-skill">
-            <div class="my-skill-name">
-              <span>HTML/CSS</span>
-              <span>80%</span>
-            </div>
-            <div class="my-skill-bar">
-              <div class="my-skill-progress" data-width="80"></div>
-            </div>
+        <div class="info">
+          <h3>Nepalaya College</h3>
+          <p>A modern, responsive college website built with a focus on usability, clean layouts, and an intuitive browsing experience for students and faculty.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>Bootstrap</span>
           </div>
-      
-          <div class="my-skill">
-            <div class="my-skill-name">
-              <span>Java</span>
-              <span>70%</span>
-            </div>
-            <div class="my-skill-bar">
-              <div class="my-skill-progress" data-width="70"></div>
-            </div>
-          </div>
-      
-          <div class="my-skill">
-            <div class="my-skill-name">
-              <span>JavaScript</span>
-              <span>50%</span>
-            </div>
-            <div class="my-skill-bar">
-              <div class="my-skill-progress" data-width="50"></div>
-            </div>
-          </div>
-      
-          <div class="my-skill">
-            <div class="my-skill-name">
-              <span>C Programming</span>
-              <span>80%</span>
-            </div>
-            <div class="my-skill-bar">
-              <div class="my-skill-progress" data-width="80"></div>
-            </div>
-          </div>
-      
-          <div class="my-skill">
-            <div class="my-skill-name">
-              <span>Python</span>
-              <span>40%</span>
-            </div>
-            <div class="my-skill-bar">
-              <div class="my-skill-progress" data-width="40"></div>
-            </div>
-          </div>
-      
-          <!-- <div class="my-skill">
-            <div class="my-skill-name">
-              <span>React</span>
-              <span>60%</span>
-            </div>
-            <div class="my-skill-bar">
-              <div class="my-skill-progress" data-width="60"></div>
-            </div>
-          </div>
-       -->
         </div>
-      </section>
-      
-      <script src="skill-bars.js"></script>
-      
+      </div>
 
-
-<!-- .......services ......-->
-
-<section id="services">
-  <div class="services-header">
-    <h2>What I Can Offer</h2>
-    <p>My technical skills and what I bring to your team</p>
-  </div>
-
-  <div class="services-container">
-
-    <!-- Responsive Web Development -->
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" alt="Web Development">
-      <h3>Responsive Web Development</h3>
-      <p>
-        I can create responsive and modern websites using HTML, CSS, and JavaScript,
-        ensuring they work smoothly across all devices and browsers.
-      </p>
-    </div>
-
-    <!-- Java Projects with Swing & OOP -->
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Java Projects">
-      <h3>Java Projects with Swing & OOP</h3>
-      <p>
-        I develop Java desktop applications using Object-Oriented Programming principles
-        and Java Swing for building intuitive graphical user interfaces.
-      </p>
-    </div>
-
-    <!-- Django Development -->
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Django Development">
-      <h3>Basic Django Web Development</h3>
-      <p>
-        I have beginner-level experience in Python Django and can build simple web apps
-        with form handling, database integration, and basic user authentication.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-        
-
-
-         <!-- <div id="services">
-            <div class="container">
-                <h1 class="sub-title">My Services</h1>
-                <div class="services-list">
-
-                    <div>
-                        <i class="fa-solid fa-code"></i>
-                       
-                        <h2> web design</h2>
-                        <p>I specialize in designing visually appealing and user-friendly web interfaces using HTML, CSS, and JavaScript, ensuring a seamless user experience.</p>
-                        <a href="#">learn more</a>
-                    </div>
-
-                    <div>
-
-                        
-                        <i class="fa-solid fa-blog"></i>
-
-                        <h2>Web Development</h2>
-                        <p>Leveraging my expertise in front-end technologies like HTML, CSS, and JavaScript, I craft responsive, dynamic, and performance-optimized websites. My approach emphasizes clean code architecture, accessibility, and seamless user experiences, ensuring that each project aligns with modern web standards and client requirements.</p>
-                        <a href="#">learn more</a>
-                        
-                    </div>
-
-                    <div>
-                        <i class="fa-brands fa-app-store"></i>
-                        <h2>App Development</h2>
-                        <p>I am passionate about creating mobile applications that are not only functional but also user-friendly. I focus on delivering high-quality apps that meet user needs and expectations.</p>
-                        <a href="#">learn more</a>
-                    </div>
-
-                </div>
-
-
-            </div>
-         </div> -->
-
-
-         <!-- ------------portfolio---------- -->
-          <div id="portfolio">
-            <div class="container">
-                <h1 class="sub-title">My Work</h1>
-                <div class="work-list">
-                     
-
-                    <div class="work">
-                        <img src="./imagee/portfolio.png">
-                        
-                        <div class="layer">
-                            <h3>Portfolio Website</h3>
-                            <p>Designed and developed a personal portfolio website to showcase skills and projects using HTML, CSS, and JavaScript.</p>
-                            
-                            <!-- <a href=" https://github.com/sangam-star/Portfolio" target="_blank">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                            </a> -->
-                            <a href="https://www.sangamsedai.com.np" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/sangam-star/Portfolio/" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    
-                     
-
-                    <!--  -->
-
-                    <div class="work">
-                        <img src="./imagee/nepalaya.png">
-                    
-                        <div class="layer">
-                            <h3>Website-Nepalaya</h3>
-                            <p>Created a responsive website for Nepalaya College, emphasizing user experience and modern design principles.</p>
-                            <a href="https://github.com/sangam-star/Nepalaya_website" target="_blank">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div class="work">
-
-                        <img src="./imagee/car rental front.png" >
-
-                        <div class="layer">
-                            <h3>Java Application</h3>
-                            <p>Developed a car rental system using Java, implementing object-oriented programming principles and database integration.</p>
-                            
-                            <a href="https://github.com/sangam-star/mini-project-java-" target="_blank">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                        </div>
-
-                        
-                    </div>
-                </div>
-
-                 
-                
-                <a href="#" class="btn">See more</a>
-
-            </div>
+      <div class="work-card reveal reveal-delay-2">
+        <div class="thumb">
+          <img src="./imagee/car%20rental%20front.png" alt="Car Rental Java Application screenshot" loading="lazy">
+          <div class="overlay">
+            <a href="https://github.com/sangam-star/mini-project-java-" target="_blank" aria-label="Source code"><i class="fab fa-github"></i></a>
           </div>
-
-
-          
-
-          <!-- --------contact----------- -->
-
-          <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title"> Contact Me</h1>
-                        <p><i class="fa-solid fa-envelope"></i> ssedai836@gmail.com</p>
-                        <p><i class="fa-solid fa-envelope"></i> sangamsedai857@gmail.com</p>
-                        <!-- <p> <i class="fa-solid fa-phone"></i> 9844354900</p> -->
-                        <br>
-                        <div class="social-icon">
-                            <a href="https://github.com/sangam-star"><i class="fa-brands fa-square-github"></i></a>
-                             
-                            <a href="https://www.linkedin.com/in/sangam-sedai/"><i class="fa-brands fa-linkedin"></i></a>
-
-                        </div>
-                        <a href="./cv sangam 2025.pdf"  download class="btn btn2">Download CV</a>
-
-                    </div>
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="NAME" placeholder="Your Name" required>
-                            <input type="email" name="EMAIL" placeholder="Your Email" required>
-                            <textarea name="Message" rows="3" placeholder="yourmessage"></textarea>
-                            <button type="submit" class="btn btn2">submit</button>
-                        </form>
-                        <span id="msg"> </span>
-
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy;  Sangam. All right reserved.  </p>
-            </div>
-
+        </div>
+        <div class="info">
+          <h3>Car Rental System</h3>
+          <p>A feature-rich Java desktop app with OOP architecture and MySQL integration — streamlining vehicle booking, customer records, and rental tracking.</p>
+          <div class="tags">
+            <span>Java</span><span>Swing</span><span>MySQL</span>
           </div>
-           
-          
+        </div>
+      </div>
+    </div>
 
-          
+    <div class="btn-center reveal">
+      <a href="https://github.com/sangam-star" target="_blank" class="btn btn-primary">
+        <i class="fab fa-github"></i>
+        See More on GitHub
+      </a>
+    </div>
+  </section>
 
-     
-     
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <span class="overline">Contact</span>
+      <h2>Let's Work Together</h2>
+      <p>Have a project in mind or just want to say hi? Drop me a message.</p>
+    </div>
 
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Get in Touch</h3>
+        <p>I'm currently looking for internships, freelance projects, and full-time opportunities. Let's build something great together.</p>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>ssedai836@gmail.com</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>sangamsedai857@gmail.com</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Nepal</span>
+        </div>
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-             event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+        <div class="social-links">
+          <a href="https://github.com/sangam-star" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sangam-sedai/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
 
-        }
- 
-    </script>
+      <div class="contact-form reveal reveal-delay-1">
+        <form name="submit-to-google-sheet">
+          <div class="input-group">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="NAME" placeholder="Your Name" required>
+          </div>
+          <div class="input-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="EMAIL" placeholder="Your Email" required>
+          </div>
+          <div class="input-group">
+            <i class="fa-solid fa-message"></i>
+            <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+        <span id="form-msg"></span>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        varsidemenu = document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
+  <!-- Footer -->
+  <footer>
+    <p style="margin-bottom: 6px;"><span>Sangam Sedai</span> &mdash; Web Developer &amp; BCA Student</p>
+    <p style="font-size: 12px;">Building clean code, one project at a time. &copy; 2025 All rights reserved.</p>
+  </footer>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzAqo5CAHrp08hWyxCPlimVxcYLDOPoAd9M9lZtUyhninmjo4HhB2kApyFar3jl0tVfeQ/exec'
-        const form = document.forms['submit-to-google-sheet']
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-        const msg = document.getElementById("msg")
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {msg .innerHTML= "Message sent successfully!"; setTimeout(function(){ msg.innerHTML = "" }, 5000); form.reset();})
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+  <!-- Scripts -->
+  <script>
+    // ===== Scroll Progress =====
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scrollProgress').style.width = progress + '%';
+    });
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const bars = document.querySelectorAll('.my-skill-progress');
+    // ===== Mobile Nav =====
+    function openNav() { document.getElementById('navLinks').classList.add('open'); }
+    function closeNav() { document.getElementById('navLinks').classList.remove('open'); }
+
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+      link.addEventListener('click', closeNav);
+    });
+
+    // ===== Active Nav Link on Scroll =====
+    const sections = document.querySelectorAll('section[id], .section[id]');
+    const navLinks = document.querySelectorAll('.nav-links li a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) current = section.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // ===== Theme Toggle =====
+    const html = document.documentElement;
+    const toggleBtns = document.querySelectorAll('#themeToggle, #themeToggleDesktop');
+    const icon = (theme) => theme === 'dark' ? 'fa-moon' : 'fa-sun';
+
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', theme);
+        toggleBtns.forEach(b => b.querySelector('i').className = 'fa-solid ' + icon(theme));
+        localStorage.setItem('theme', theme);
+      });
+    });
+
+    const saved = localStorage.getItem('theme');
+    if (saved && saved !== 'dark') {
+      html.setAttribute('data-theme', saved);
+      toggleBtns.forEach(b => b.querySelector('i').className = 'fa-solid ' + icon(saved));
+    }
+
+    // ===== Tab Switching =====
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // ===== Skill Bars + Counter Animation =====
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Animate bars
+            const bars = entry.target.querySelectorAll('.skill-bar');
             bars.forEach(bar => {
-              const width = bar.getAttribute('data-width');
-              bar.style.width = width + '%';
+              bar.style.width = bar.getAttribute('data-width') + '%';
             });
-          });
-      </script>
- 
-         
+            // Animate counters if this is the stats section
+            const counters = entry.target.querySelectorAll('.number[data-count]');
+            counters.forEach(counter => {
+              const target = +counter.getAttribute('data-count');
+              const increment = Math.ceil(target / 30);
+              let current = 0;
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  counter.textContent = target + '+';
+                  clearInterval(timer);
+                } else {
+                  counter.textContent = current;
+                }
+              }, 50);
+            });
+          }
+        });
+      }, { threshold: 0.4 });
 
+      const skillsSection = document.getElementById('skills');
+      const statsSection = document.getElementById('stats');
+      if (skillsSection) observer.observe(skillsSection);
+      if (statsSection) observer.observe(statsSection);
+    });
+
+    // ===== Scroll Reveal =====
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    });
+
+    // ===== Typing Effect =====
+    document.addEventListener('DOMContentLoaded', () => {
+      const el = document.querySelector('.typing');
+      const words = ['Tech Enthusiast', 'Web Developer', 'Problem Solver', 'BCA Student'];
+      let wordIndex = 0, charIndex = 0, isDeleting = false;
+
+      function type() {
+        const current = words[wordIndex];
+        el.textContent = isDeleting
+          ? current.substring(0, charIndex--)
+          : current.substring(0, charIndex++);
+
+        if (!isDeleting && charIndex === current.length + 1) {
+          isDeleting = true;
+          setTimeout(type, 2000);
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(type, 500);
+        } else {
+          setTimeout(type, isDeleting ? 40 : 80);
+        }
+      }
+      type();
+    });
+
+    // ===== Back to Top =====
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    backBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== Contact Form =====
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzAqo5CAHrp08hWyxCPlimVxcYLDOPoAd9M9lZtUyhninmjo4HhB2kApyFar3jl0tVfeQ/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const formMsg = document.getElementById('form-msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(() => {
+          formMsg.innerHTML = 'Message sent successfully!';
+          formMsg.style.color = '#61b752';
+          setTimeout(() => { formMsg.innerHTML = ''; }, 5000);
+          form.reset();
+        })
+        .catch(() => {
+          formMsg.innerHTML = 'Something went wrong. Please try again.';
+          formMsg.style.color = '#ff004f';
+        })
+        .finally(() => {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+        });
+    });
+  </script>
 </body>
 </html>
