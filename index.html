@@ -74,7 +74,7 @@
           <i class="fa-solid fa-arrow-down"></i>
           View My Work
         </a>
-        <a href="./cv%20sangam%202025.pdf" download class="btn btn-outline">
+        <a href="./cvsangam2026_updated.pdf" download class="btn btn-outline">
           <i class="fa-solid fa-download"></i>
           Download CV
         </a>
@@ -295,20 +295,20 @@
       </div>
 
       <div class="work-card reveal reveal-delay-1">
-        <div class="thumb">
-          <img src="./imagee/nepalaya.png" alt="Nepalaya College Website screenshot" loading="lazy">
-          <div class="overlay">
-            <a href="https://github.com/sangam-star/Nepalaya_website" target="_blank" aria-label="Source code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="info">
-          <h3>Nepalaya College</h3>
-          <p>A modern, responsive college website built with a focus on usability, clean layouts, and an intuitive browsing experience for students and faculty.</p>
-          <div class="tags">
-            <span>HTML</span><span>CSS</span><span>Bootstrap</span>
-          </div>
-        </div>
-      </div>
+  <div class="thumb">
+    <img src="./imagee/ivy apparel ss.png" alt="Ivy Apparel website screenshot" loading="lazy">
+    <div class="overlay">
+      <a href="https://github.com/sangam-star/IVY-APPAREL" target="_blank" aria-label="Source code"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+  <div class="info">
+    <h3>Ivy Apparel</h3>
+    <p>A dynamic e-commerce clothing website with user registration and login, product browsing, and a shopping cart, designed to be responsive and easy to use on desktop and mobile.</p>
+    <div class="tags">
+      <span>PHP</span><span>CSS</span><span>JavaScript</span>
+    </div>
+  </div>
+</div>
 
       <div class="work-card reveal reveal-delay-2">
         <div class="thumb">
@@ -469,35 +469,36 @@
     document.addEventListener('DOMContentLoaded', () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          // Animate bars
-          entry.target.querySelectorAll('.skill-bar').forEach(bar => {
-            bar.style.width = bar.getAttribute('data-width') + '%';
-          });
-          // Animate counters
-          entry.target.querySelectorAll('.number[data-count]').forEach(counter => {
-            const target = +counter.getAttribute('data-count');
-            if (target <= 0) return;
-            const increment = Math.ceil(target / 30);
-            let current = 0;
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= target) {
-                counter.textContent = target + '+';
-                clearInterval(timer);
-              } else {
-                counter.textContent = current;
-              }
-            }, 50);
-          });
-          observer.unobserve(entry.target);
+          if (entry.isIntersecting) {
+            // Animate bars
+            const bars = entry.target.querySelectorAll('.skill-bar');
+            bars.forEach(bar => {
+              bar.style.width = bar.getAttribute('data-width') + '%';
+            });
+            // Animate counters if this is the stats section
+            const counters = entry.target.querySelectorAll('.number[data-count]');
+            counters.forEach(counter => {
+              const target = +counter.getAttribute('data-count');
+              const increment = Math.ceil(target / 30);
+              let current = 0;
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  counter.textContent = target + '+';
+                  clearInterval(timer);
+                } else {
+                  counter.textContent = current;
+                }
+              }, 50);
+            });
+          }
         });
-      }, { threshold: 0.2 });
+      }, { threshold: 0.4 });
 
-      ['skills', 'stats'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) observer.observe(el);
-      });
+      const skillsSection = document.getElementById('skills');
+      const statsSection = document.getElementById('stats');
+      if (skillsSection) observer.observe(skillsSection);
+      if (statsSection) observer.observe(statsSection);
     });
 
     // ===== Scroll Reveal =====
